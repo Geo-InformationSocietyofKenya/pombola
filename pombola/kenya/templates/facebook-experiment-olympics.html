@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 
-{% block header %}
-    {# We don't want a header! #}
-{% endblock %}
-
 {% block title %}2016 is Olympic Year!{% endblock %}
 
+{% block body_attributes %}class="facebook-experiment-page"{% endblock %}
+
+{% block header %}
+    <header id="site-header">
+        <div class="wrapper">
+            {% include "site_header_logo.html" %}
+        </div>
+    </header>
+{% endblock %}
+
 {% block breadcrumbs %}
-    {# Hide bread crumbs on this page. Insert blank div to add padding #}
-    <div id="breadcrumb-replacement">&nbsp;</div>
+    {# Hide bread crumbs on this page #}
 {% endblock %}
 
 {% block content %}

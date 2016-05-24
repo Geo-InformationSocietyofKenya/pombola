@@ -61,6 +61,13 @@ COUNTRY_JS = {
         'output_filename': 'js/experiments.js',
         'template_name': 'pipeline/js-array.html',
     },
+    'politics-olympics-facebook-experiment': {
+        'source_filenames': (
+            'js/facebook-experiment.js',
+        ),
+        'output_filename': 'js/facebook-experiment.js',
+        'template_name': 'pipeline/js-array.html',
+    },
     'women-wordcloud': {
         'source_filenames': (
             'js/jqcloud-1.0.4.js',
