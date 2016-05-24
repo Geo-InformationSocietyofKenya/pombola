@@ -1,0 +1,348 @@
+{% extends 'base.html' %}
+
+{% block title %}The National Assembly of Kenya{% endblock %}
+
+{% block header %}
+    {# We don't want a header! #}
+{% endblock %}
+
+{% block breadcrumbs %}
+    {# Hide bread crumbs on this page. Insert blank div to add padding #}
+    <div id="breadcrumb-replacement">&nbsp;</div>
+{% endblock %}
+
+{% block content %}
+
+<h1>The National Assembly of Kenya</h1>
+
+    <p>The National Assembly of Kenya is made up of 350 members: 290 members elected by registered voters from constituencies, 47 women elected by registered voters from the counties, 12 members nominated by parliamentary political parties to represent special interests of youth, persons with disabilities and workers, and the Speaker of the National Assembly.</p>
+
+    <p>The members of the National Assembly represent the people of constituencies and as well as special interests (youth, women, persons with disabilities and workers) in the National Assembly.</p>
+
+    <p>The roles of the members of the national assembly are to:</p>
+    <ul>
+        <li>Represent the diversity of the nation available in the counties, constituencies as well as special interest groups</li>
+        <li>Enact legislation</li>
+        <li>Determine the allocation of national revenue across the levels of the national and county governments, and;</li>
+        <li>Exercise oversight over the Executive - the President, the Deputy President and other State officers.</li>
+    </ul>
+
+<h2>Speaking in Parliament</h2>
+
+    <p>One measure of how active your MP is in Parliament is how many times they spoke.</p>
+
+    <p>In 2015 3 MPs spoke more than 500 times!<br>
+    27 MPs, however, didn’t speak at all!</p>
+
+    <p>At Mzalendo we believe that MPs from the same county should form County Caucuses to enable them collectively advance the interests of the counties they hail from.</p>
+
+    <p>In 2015 there were huge variations in activity from county to county:</p>
+
+    <h3>Counties with the Most Active MPs</h3>
+
+    <p>Siaya: 2,260 speeches<br>
+    Kakamega: 1,551 speeches<br>
+    Homabay: 1,390 speeches</p>
+
+    <h3>Counties with the Least Active MPs</h3>
+    <p>Lamu: 23 speeches<br>
+    Tana River: 86 speeches<br>
+    Kwale: 123 speeches</p>
+
+<h2>Your Role In Democracy</h2>
+
+    <p>Kenyan citizens are expected to monitor how state officers are functioning to ensure the guiding principles of leadership and integrity are respected and maintained. The guiding principles include:
+
+    <ul>
+        <li>Selection based on personal integrity, competence and suitability or election in a free and fair election;</li>
+        <li>Objectivity and impartiality in decision making and in ensuring decisions are not influenced by nepotism, favouritism and other improper practices;</li>
+        <li>Selfless service based on public interest is maintained;</li>
+        <li>Accountability to the public for decisions and actions; and</li>
+        <li>Discipline and commitment in service to the people.</li>
+    </ul>
+
+    <p>As a Kenyan citizen, you have the opportunity to hold your representatives to account in the national elections scheduled to take place in August 2017.</p>
+
+<h2>Registering to Vote</h2>
+
+    <p>In order to vote, you must be registered. To be eligible to register to vote you must be:</p>
+
+    <ul>
+        <li>A Kenyan citizen</li>
+        <li>Aged 18 years and above</li>
+        <li>Have a national ID or a Passport</li>
+    </ul>
+
+    <p>To register, you must go to your nearest registration centre.</p>
+
+<h2>Have you registered to vote?</h2>
+
+    <p>If not, find the location of your nearest registration centre</p>
+
+    <div class="ui-widget">
+  <label for="reg_county_select">County: </label>
+  <input id="reg_county_select">
+</div>
+
+<h2>Do you know who your MP is?</h2>
+
+    <p>Find out here!</p>
+
+    <p>Drop down list of counties then drop down list of constituencies</p>
+
+<p><a href="/fb/politics/thanks">NEXT</a></p>
+
+{% endblock %}
+
+{% block footer_extra_js_to_load %}
+
+<script type="text/javascript">
+
+var counties = {
+    "Upper Eastern Isiolo": [
+        {
+            "sn": "1",
+            "name": "Regional Office",
+            "address": "Isiolo Town"
+        },
+        {
+            "sn": "b",
+            "name": "Regional Office Warehouse",
+            "address": "Isiolo Town"
+        },
+        {
+            "sn": "2",
+            "name": "Isiolo South",
+            "address": "Garbatulla Town"
+        },
+        {
+            "sn": "3",
+            "name": "Laisamis",
+            "address": "Laisamis Town"
+        },
+        {
+            "sn": "4",
+            "name": "Moyale",
+            "address": "Moyale Town"
+        },
+        {
+            "sn": "5",
+            "name": "North Horr",
+            "address": "North Horr Town"
+        },
+        {
+            "sn": "6",
+            "name": "Saku",
+            "address": "Marsabit Town"
+        }
+    ],
+    "Lower Central": [
+        {
+            "sn": "9",
+            "name": "Gatundu North",
+            "address": "DCs Office Compound, Kamwangi Town."
+        },
+        {
+            "sn": "11",
+            "name": "Thika Town",
+            "address": "Thika Town-DOs Office CompoundOpp Thika Stadium"
+        },
+        {
+            "sn": "18",
+            "name": "Limuru",
+            "address": "Limuru District Headquarters Compound"
+        },
+        {
+            "sn": "3",
+            "name": "Kiharu",
+            "address": "Murang'a Town -County Council Building 2nd Floor"
+        },
+        {
+            "sn": "1",
+            "name": "Kangema",
+            "address": "Kangema - Muguni/ Iyego Farmers Cooperative Building Opp.Kangema Police Station"
+        },
+        {
+            "sn": "2",
+            "name": "Mathioya",
+            "address": "Kiria-ini , Karuku's Building"
+        },
+        {
+            "sn": "4",
+            "name": "Kigumo",
+            "address": "Kangari Town, Wanyaiganji Building - Ground Floor"
+        },
+        {
+            "sn": "5",
+            "name": "Maragwa",
+            "address": "World Vision Building Makuyu Opposite DOs office"
+        },
+        {
+            "sn": "6",
+            "name": "Kandara",
+            "address": "Kandara House - Kandara Town"
+        },
+        {
+            "sn": "7",
+            "name": "Gatanga",
+            "address": "Murata Sacco Bldg.Ground Floor, Opp.Kirwara Police Station"
+        },
+        {
+            "sn": "8",
+            "name": "Gatundu South",
+            "address": "Gatundu Town Near Gatundu Law Courts"
+        },
+        {
+            "sn": "10",
+            "name": "Juja",
+            "address": "Juja Town -Menja Vision, Plaza"
+        },
+        {
+            "sn": "12",
+            "name": "Ruiru",
+            "address": "Ruiru Town opposite DCs office"
+        },
+        {
+            "sn": "13",
+            "name": "Githunguri",
+            "address": "Githunguri- Uplands Rd -Best wing Building"
+        },
+        {
+            "sn": "14",
+            "name": "Kiambu",
+            "address": "Kiambu Town -Biashara Street, Mapa House 4th Floor."
+        },
+        {
+            "sn": "15",
+            "name": "Kiambaa",
+            "address": "Karuri – Banana Town"
+        },
+        {
+            "sn": "16",
+            "name": "Kabete",
+            "address": "Kabete- Next to Rhythms College"
+        },
+        {
+            "sn": "17",
+            "name": "Kikuyu",
+            "address": "Kikuyu Town, Telcom Building - 1st Floor."
+        },
+        {
+            "sn": "19",
+            "name": "Lari",
+            "address": "Kagwe Township - Moi Rd - Mitundu Building"
+        }
+    ],
+    "Wajir/Mandera": [
+        {
+            "sn": "2",
+            "name": "Wajir North",
+            "address": "OPPOSITE AL-FURQAN INTEGRATED ACADEMY"
+        },
+        {
+            "sn": "3",
+            "name": "Wajir East",
+            "address": "OPPOSITE AP CAMP."
+        },
+        {
+            "sn": "4",
+            "name": "Tarbaj",
+            "address": "OPPOSITE GRIFTU HOSPITAL"
+        },
+        {
+            "sn": "5",
+            "name": "Wajir West",
+            "address": "NEXT TO DC’S RESIDENCE"
+        },
+        {
+            "sn": "6",
+            "name": "Eldas",
+            "address": "NEXT TO TAKABA PRI. SCHOOL"
+        },
+        {
+            "sn": "7",
+            "name": "Wajir South",
+            "address": "NEXT DC’S OFFICE"
+        },
+        {
+            "sn": "8",
+            "name": "Mandera West",
+            "address": "OPPOSITE DC’S"
+        },
+        {
+            "sn": "9",
+            "name": "Banissa",
+            "address": "OPPOSITE POST OFFICE"
+        },
+        {
+            "sn": "10",
+            "name": "Mandera North",
+            "address": "BEHIND EQUITY BANK"
+        },
+        {
+            "sn": "11",
+            "name": "Mandera South",
+            "address": "NEXT TO ELWAK DC’S OFFICE OFFICE"
+        },
+        {
+            "sn": "12",
+            "name": "Mandera East",
+            "address": "NEXT TO HABASWEIN DC’S OFFICE"
+        },
+        {
+            "sn": "13",
+            "name": "Mandera East",
+            "Address": ""
+        },
+        {
+            "sn": "14",
+            "name": "Lafey",
+            "Address": ""
+        },
+        {
+            "sn": "1",
+            "name": "Wajir/Mandera Region",
+            "address": "NEXT TO DC’S OFFICE"
+        }
+    ],
+    "Garissa/Ijara": [
+        {
+            "sn": "1",
+            "name": "Ijara",
+            "address": "OFF HOLA ROAD, NEXT ARILAND OFFICE"
+        },
+        {
+            "sn": "2",
+            "name": "Dadaab",
+            "address": "OFF UN MAIN GATE"
+        },
+        {
+            "sn": "3",
+            "name": "Lagdera",
+            "address": "OPPSITE POLICE CAMP"
+        },
+        {
+            "sn": "4",
+            "name": "Balambala",
+            "address": "BALAMBALA PRIMARY"
+        },
+        {
+            "sn": "5",
+            "name": "Garissa Township",
+            "address": "NEXT EWSO NGIRO"
+        },
+        {
+            "sn": "6",
+            "name": "Region Office",
+            "address": "NEXT TO COUNTY COMMISSIONER RESIDENT"
+        }
+    ]
+};
+
+jquery( "#reg_county_select" ).autocomplete({
+      source: counties
+    });
+
+</script>
+
+{% endblock %}

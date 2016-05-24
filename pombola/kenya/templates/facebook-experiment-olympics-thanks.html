@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    {# We don't want a header! #}
+{% endblock %}
+
+{% block title %}Thanks for responding{% endblock %}
+
+{% block breadcrumbs %}
+    {# Hide bread crumbs on this page. Insert blank div to add padding #}
+    <div id="breadcrumb-replacement">&nbsp;</div>
+{% endblock %}
+
+{% block content %}
+
+    <h1>Thanks for responding</h1>
+
+    <p>You can find out more about Kenya at the Olympic on Wikipedia.</p>
+
+    <p><a href="https://en.wikipedia.org/wiki/Kenya_at_the_Olympics">Click here to go there</a></p>
+
+{% endblock %}

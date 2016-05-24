@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    {# We don't want a header! #}
+{% endblock %}
+
+{% block title %}2016 is Olympic Year!{% endblock %}
+
+{% block breadcrumbs %}
+    {# Hide bread crumbs on this page. Insert blank div to add padding #}
+    <div id="breadcrumb-replacement">&nbsp;</div>
+{% endblock %}
+
+{% block content %}
+
+    <h1>2016 is Olympic Year!</h1>
+
+    <h2>Kenyan Athletes are the Most Successful in Africa!</h2>
+    <p>Did you know that Kenyan athletes are the most successful in Africa?</p>
+
+    <p>Brief bullets on:</p>
+    <ul>
+        <li>How successful Kenyan runners are</li>
+        <li>Why it is they achieve this success</li>
+    </ul>
+
+    <h2>Copy - How Kenya compares to other countries</h2>
+    <p>Brief bullets on:</p>
+    <ul>
+        <li>The number of medals Kenyan wins vs. other countries in Africa</li>
+        <li>How Kenya does on medals per head of population</li>
+    </ul>
+
+
+    <h2>Call To Action</h2>
+    <p>See how Kenya compares to other African countries in terms of Olympic Athletic medals won! (click, table displayed - data from: https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table - Kenyan has won more Summer Olympic medals than any other African country)</p>
+
+    <h2>Call To Action</h2>
+    <p>Find out who our winners are!</p>
+    <p>Drop down menu of Olympic games, select a games, see the athletes who won what, data from - https://en.wikipedia.org/wiki/Kenya_at_the_Olympics</p>
+
+    <p><a href="/fb/olympics/thanks">NEXT PAGE BUTTON</a></p>
+
+{% endblock %}

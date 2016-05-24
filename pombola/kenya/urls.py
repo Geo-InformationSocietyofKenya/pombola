@@ -47,6 +47,19 @@ urlpatterns = [
             ),
         {'slug': 'party'},
         ),
+
+    url(r'^fb/politics$',
+        TemplateView.as_view(template_name='facebook-experiment-politics.html')
+        ),
+    url(r'^fb/olympics$',
+        TemplateView.as_view(template_name='facebook-experiment-olympics.html')
+        ),
+    url(r'^fb/politics/thanks$',
+        TemplateView.as_view(template_name='facebook-experiment-politics-thanks.html')
+        ),
+    url(r'^fb/olympics/thanks$',
+        TemplateView.as_view(template_name='facebook-experiment-olympics-thanks.html')
+        ),
 ]
 
 # Create the two County Performance pages:
