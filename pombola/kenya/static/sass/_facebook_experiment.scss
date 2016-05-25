@@ -29,6 +29,7 @@ $breakpoint-md: 60em; // 60em @ 16px == 960px
     color: $colour_primary_mid;
     text-align: center;
     margin: 1em 0;
+    line-height: 1.2em;
   }
 
   h1 {
@@ -61,16 +62,6 @@ $breakpoint-md: 60em; // 60em @ 16px == 960px
 
     @media (min-width: $breakpoint-md) {
       margin: 2em 0;
-    }
-  }
-
-  img {
-    width: 100%;
-    margin-bottom: 1em;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-
-    @media (min-width: $breakpoint-md) {
-      margin-bottom: 2em;
     }
   }
 
@@ -109,12 +100,21 @@ $breakpoint-md: 60em; // 60em @ 16px == 960px
     margin-bottom: 4em;
 
     .button {
-      display: inline-block;
-      background-color: $colour_primary_mid;
-      color: #fff;
       font-size: 1.2em;
       padding: 0.7em 1.5em;
-      border-radius: 0.3em;
+    }
+  }
+
+  .button {
+    display: inline-block;
+    background-color: $colour_primary_mid;
+    color: #fff;
+    padding: 0.5em 1.2em;
+    border-radius: 0.3em;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      background-color: dakren($colour_primary_mid, 10%);
     }
   }
 
@@ -143,6 +143,21 @@ $breakpoint-md: 60em; // 60em @ 16px == 960px
       margin-top: 0.5em;
       width: 15em;
     }
+
+    td, th {
+      border-color: mix(#000, $colour_off_white, 10%);
+    }
+
+    th {
+      background-color: mix(#000, $colour_off_white, 5%);
+    }
+  }
+
+  table .event {
+    display: block;
+    font-size: 0.8em;
+    font-style: italic;
+    margin-top: 0.2em;
   }
 
   .row {

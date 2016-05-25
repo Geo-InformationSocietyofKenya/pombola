@@ -65,6 +65,10 @@ var splitByOptgroup = function splitByOptgroup($originalSelect){
 
 $(function(){
 
+  $('.js-split-by-optgroup').each(function(){
+    splitByOptgroup( $(this) );
+  });
+
   $('.js-find-mp').on('change', function(){
     var constituency = $(this).val();
     if(constituency != '') {
@@ -83,8 +87,17 @@ $(function(){
     }
   });
 
-  $('.js-split-by-optgroup').each(function(){
-    splitByOptgroup( $(this) );
+  $('.js-compare-countries').on('click', function(){
+    $('.js-compare-countries-result table').toggle();
+  });
+
+  $('.js-show-winners').on('change', function(){
+    var year = $(this).val();
+    if(year != '') {
+      $('.js-show-winners-result #' + year).show().siblings().hide();
+    } else {
+      $('.js-show-winners-result table').hide();
+    }
   });
 
 });
