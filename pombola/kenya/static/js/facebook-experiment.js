@@ -69,6 +69,9 @@ $(function(){
     splitByOptgroup( $(this) );
   });
 
+  // Show the hidden page element (we don't show anything if no JS is available)
+  $('#ctas').show();
+
   $('.js-find-mp').on('change', function(){
     var constituency = $(this).val();
     if(constituency != '') {
